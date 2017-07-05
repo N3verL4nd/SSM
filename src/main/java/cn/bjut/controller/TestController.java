@@ -1,6 +1,6 @@
 package cn.bjut.controller;
 
-import cn.bjut.mapper.PersonMapper;
+import cn.bjut.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,16 +11,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class TestController {
-    private PersonMapper personMapper;
+    private PersonService personService;
 
     @Autowired
-    public void setPersonMapper(PersonMapper personMapper) {
-        this.personMapper = personMapper;
+    public void setPersonService(PersonService personService) {
+        this.personService = personService;
     }
+
+
 
     @RequestMapping("/list")
     public String listPerson(Model model) {
-        model.addAttribute("persons", personMapper.selectAllPersons());
+        model.addAttribute("persons", personService.getAllPersons());
         return "list";
     }
 
