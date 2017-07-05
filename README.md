@@ -523,11 +523,16 @@ public class TestController {
 </html>
 
 ```
+测试：
+项目目录下执行gradle appRun
+![测试](http://img.blog.csdn.net/20170705131254431?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveF9peWE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 ![SSM](http://img.blog.csdn.net/20170705100201435?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveF9peWE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 至此就简单的完成了SSM框架的整合。
 
+Demo:
+[https://github.com/N3verL4nd/SSM.git](https://github.com/N3verL4nd/SSM.git)
 
 
 
