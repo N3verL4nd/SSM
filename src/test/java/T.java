@@ -1,5 +1,6 @@
 import cn.bjut.entity.Person;
 import cn.bjut.mapper.PersonMapper;
+import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -10,10 +11,10 @@ import java.util.List;
  * Created by N3verL4nd on 2017/7/4.
  */
 public class T {
-    private static ApplicationContext ctx;
+    private ApplicationContext ctx;
 
-    static
-    {
+    @Before
+    public void setUp() {
         ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
     }
 
