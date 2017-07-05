@@ -17,12 +17,14 @@
         <property name="password" value="${jdbc.password}"/>
     </bean>
 
+    <!-- 把mybatis SqlSessionFactory 的创建交由 spring管理 -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="typeAliasesPackage" value="cn.bjut.entity"/>
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
     </bean>
 
+    <!-- scan for mappers and let them be autowired -->
     <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="cn.bjut.mapper"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
